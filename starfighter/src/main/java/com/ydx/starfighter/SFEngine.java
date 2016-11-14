@@ -18,7 +18,7 @@ public class SFEngine {
     public static final boolean LOOP_BACKGROUND_MUSIC = true ;
     public static  Context context ;
     public static Thread musicThread;
-
+    public static final int BACKGROUND_LAYER_ONE = R.drawable.backgroundstars;
     /**
      *  Kill game and exit
      * @param v
