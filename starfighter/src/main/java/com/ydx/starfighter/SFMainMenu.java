@@ -1,6 +1,7 @@
 package com.ydx.starfighter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Process;
 import android.view.View;
@@ -19,7 +20,7 @@ public class SFMainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findView();
-
+        createMusicThread();
     }
 
     private  void findView(){
@@ -59,6 +60,16 @@ public class SFMainMenu extends Activity {
         });
     }
 
-
+    private void createMusicThread(){
+        SFEngine.musicThread = new Thread(){
+            @Override
+            public void run() {
+                Intent bgmusic = new Intent(getApplicationContext(),SFMusic.class);
+                startService(bgmusic);
+                SFEngine.context = getApplicationContext();
+            }
+        };
+        SFEngine.musicThread.start();
+    }
 
 }
