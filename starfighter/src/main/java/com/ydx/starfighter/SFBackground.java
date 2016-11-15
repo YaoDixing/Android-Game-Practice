@@ -26,9 +26,8 @@ public class SFBackground {
     private int[] textures = new int[1];
 
     /**
-     * 正方形的 x y z
-     * 个人理解因为是2D游戏 所以z = 0
-     * x y 覆盖全部
+     *在三维 坐标系中的 xoy面 的一个正方形 的4个顶点
+     * 在三维坐标系中画图就明白了
      */
     private float vertices[] = {
             0.0f,0.0f,0.0f,
@@ -37,6 +36,9 @@ public class SFBackground {
             0.0f,1.0f,0.0f
     };
 
+    /**
+     * 二维坐标系中的 正方形 的4个顶点
+     */
     private float texture[] = {
             0.0f,0.0f,
             1.0f,0f,
