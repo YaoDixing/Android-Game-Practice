@@ -9,10 +9,8 @@ import android.util.AttributeSet;
  */
 public class SFGameView extends GLSurfaceView {
     public SFGameView(Context context) {
-        this(context,null);
+        super(context);
+        setRenderer(new SFGameRenderer());
     }
 
-    public SFGameView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
 }

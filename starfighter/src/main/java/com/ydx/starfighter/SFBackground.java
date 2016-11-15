@@ -40,6 +40,7 @@ public class SFBackground {
     private float texture[] = {
             0.0f,0.0f,
             1.0f,0f,
+            1.0f,1.0f,
             0f,1.0f
     };
 
